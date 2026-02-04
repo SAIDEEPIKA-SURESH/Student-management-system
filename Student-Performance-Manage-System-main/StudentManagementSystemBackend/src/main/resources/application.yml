@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: CW2
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/cw2_db?useSSL=false&serverTimezone=UTC
+    username: root
+    password: Saideepikasuresh2005#
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+
+server:
+  port: 2800
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
