@@ -1,155 +1,143 @@
-🎓 Student Grade Management System
+# 🎓 Student Management System
 
-📌 Project Overview
+A full-stack **Student Management System** built to manage academic records, performance analytics, and user roles efficiently.  
+Designed with modern software engineering principles, secure authentication, and scalable architecture.
 
-The Student Management System is a full-stack web application designed to manage student records and academic performance efficiently.
-It supports students, academic staff, and administrators, enabling secure authentication, grade management, analytics, and academic record tracking across multiple years.
+---
 
-The system follows modern software engineering practices, including Spring Boot, MyBatis Plus, React, and Test-Driven Development (TDD).
+## 📌 Project Overview
 
-📑 Table of Contents
+The **Student Management System** is a role-based web application that supports:
 
-Technical Stack
+- 🎓 Students
+- 🧑‍🏫 Academic Staff
+- 🛠 Administrators  
 
-Installation & Setup
+It enables secure authentication, grade management, performance analytics, and academic record tracking across multiple academic years.
 
-Project Structure
+The system follows **industry-standard practices**, including:
 
-Features
+- Spring Boot backend
+- MyBatis Plus ORM
+- React frontend
+- JWT-based security
+- Test-Driven Development (TDD)
 
-How to Use
+---
 
-🛠 Technical Stack
-Backend
+## 📑 Table of Contents
 
-Java 17
+- [Technical Stack](#-technical-stack)
+- [Installation & Setup](#-installation--setup)
+- [Project Structure](#-project-structure-backend)
+- [Features](#-features)
+- [How to Use](#-how-to-use)
+- [Final Notes](#-final-notes)
 
-Spring Boot 3.3.4
+---
 
-MyBatis Plus 3.5.7
+## 🛠 Technical Stack
 
-H2 / MySQL Database
+### 🔧 Backend
+- Java 17  
+- Spring Boot 3.3.4  
+- MyBatis Plus 3.5.7  
+- H2 / MySQL  
+- Spring Security + JWT  
+- Maven 3.6+  
+- JaCoCo (code coverage)
 
-Spring Security + JWT
+### 🎨 Frontend
+- React 18  
+- Ant Design  
+- Axios  
+- jsPDF (PDF generation)
 
-Maven 3.6+
+---
 
-JaCoCo (Code Coverage)
+## ⚙️ Installation & Setup
 
-Frontend
-
-React 18
-
-Ant Design
-
-Axios
-
-jsPDF (PDF Generation)
-
-⚙️ Installation & Setup
-Prerequisites
+### ✅ Prerequisites
 
 Ensure the following are installed:
 
-Java 17
+- Java 17  
+- Maven 3.6+  
+- Node.js 18+  
+- npm 9+  
+- Git  
 
-Maven 3.6+
+---
 
-Node.js 18+
+### 🔧 Backend Setup
 
-npm 9+
-
-Git
-
-🔧 Backend Setup
-
-Clone the repository
-
-git clone https://github.com/ucl-comp0010-2024/G-24java.git
-
-
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/SAIDEEPIKA-SURESH/Student-management-system/edit/main/README.md 
 Navigate to backend directory
 
 cd StudentManagementSystemBackend
-
-
 Install dependencies
 
 mvn clean install
-
-
 Run the application
 
 Open StudentManagementSystemApplication.java
 
 Run as Spring Boot Application
 
-Backend runs on:
+📍 Backend runs on:
 
 http://localhost:2800
-
 🎨 Frontend Setup
-
 Navigate to frontend directory
 
 cd student-management-system-frontend
-
-
 Install dependencies
 
 npm install
-
-
-Start frontend
+Start the application
 
 npm start
-
-
-Frontend runs on:
+📍 Frontend runs on:
 
 http://localhost:3000
-
 🗂 Project Structure (Backend)
 src/main/java
 │
 ├── annotation        # Custom annotations
-├── aspect            # AOP logic for annotations
+├── aspect            # AOP logic
 ├── config            # Configuration classes
 ├── controller        # REST controllers
 ├── dto               # Request DTOs
 ├── entity            # Database entities
 ├── enums             # Enum definitions
 ├── exception         # Custom exceptions
-├── exceptionhandler  # Global exception handlers
+├── exceptionhandler  # Global exception handling
 ├── generator         # Data initialization
 ├── mapper            # MyBatis mappers
 ├── model             # Domain models
-├── response          # Standardized responses
+├── response          # Standardized API responses
 ├── service           # Business logic
 ├── utils             # Utility classes
 ├── vo                # Response objects
-
 ✨ Features
 🔐 Server-Side Features
-
 Authentication & Authorization
-
 JWT-based authentication
 
-Role-based access (Admin / Staff / Student)
+Role-based access control (Admin / Staff / Student)
 
 Secure token refresh
 
 Student Management
-
 Add / Edit / Delete students
 
 Bulk CSV import
 
-Student performance analytics
+Performance analytics
 
 Staff Management
-
 Staff CRUD operations
 
 CSV import support
@@ -157,150 +145,99 @@ CSV import support
 Teaching performance statistics
 
 Module Management
-
-Manage academic modules
+Academic module administration
 
 Module performance tracking
 
 Assessment Records
-
 Add / Update / Delete grades
 
-Statistical analysis per record
+Statistical analysis per module
 
 Academic year tracking
 
 Password Management
-
 Secure password reset
 
 Old-password verification
 
 Test-Driven Development
-
 Core services fully tested
 
 JaCoCo coverage reporting
 
 🌐 Web Features
+Role-based login dashboards
 
-Authentication UI
+Auto token refresh
 
-Login with role-based dashboards
-
-Token auto-refresh
-
-Admin Dashboard
-
-System statistics
-
-User management
-
-Data import/export
-
-Staff Portal
-
-Grade entry & editing
-
-Module analytics
-
-Teaching performance insights
-
-Student Portal
-
-Academic record viewing
-
-Performance statistics
-
-Transcript download (PDF)
-
-Data Handling
+Admin analytics dashboard
 
 CSV import/export
 
-PDF transcript generation
+Advanced filtering & search
 
 Real-time UI updates
 
-Advanced filtering & search
+PDF transcript generation
 
 ▶️ How to Use
 🔑 Default Admin Login
 Username	Password
 admin	123456
-
-(Password can be changed after login)
+Password can be changed after login.
 
 🧑‍🏫 Add Academic Staff
-
-Go to Academic Staff tab
+Navigate to Academic Staff
 
 Add manually or upload CSV
 
-CSV template available in UI
+CSV templates provided in UI
 
 🎓 Add Students
-
 Accessible by Admin and Staff
 
-Add manually or via CSV upload
+Manual or CSV upload
 
-Filter by programme, department, year
+Filter by department, programme, and year
 
 📚 Add Modules
-
 Admin only
 
-Define module leader, credits, MNC status
+Define module leader, credits, and MNC status
 
 📝 Add Assessment Records
+Manual or CSV upload
 
-Add manually or upload CSV
-
-Supports detailed performance analytics
+Automatic performance analytics
 
 📊 View & Search Data
-
-Advanced filters for students, staff, modules
-
-View detailed statistics and performance trends
+Advanced filters
 
 Role-based data visibility
 
+Performance trend analysis
+
 📄 Generate Transcript (PDF)
+Admin & Staff: via Student view
 
-Admin & Staff: from Student view
-
-Students: from Academic Records
+Students: via Academic Records
 
 Includes:
 
-Personal info
+Personal details
 
 Module results
 
 Performance summary
 
 🔐 Password Reset
-
-Available to all roles
+Available for all roles
 
 Requires old password verification
 
 🚪 Logout
-
 Use profile menu (top-right)
 
 Secure session termination
 
-🚀 Final Notes
-
-This project demonstrates:
-
-Clean architecture
-
-Secure authentication
-
-Scalable backend design
-
-Real-world academic data workflows
